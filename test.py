@@ -9,17 +9,20 @@ while True:
     mata_kuliah = input("masukkan mata kuliah : ")
     kelas = input("masukkan kelas : ")
 
-    di_simpan = {"Nama": nama, "mata_kuliah": mata_kuliah, "Kelas": kelas}
-
-    if nama in di_simpan:
-        print("nama sudah ada")
-        continue
-    else:
-        data_mahasiswa.append(di_simpan)
-        print("nama belum ada")
-
-with open("data_mahasiswa.txt", "w") as file:
+    nama_sudah_ada = False
     for data in data_mahasiswa:
-        file.write(f"Nama : {data['Nama']}, Mata Kuliah : {data['mata_kuliah']}, Kelas : {data['Kelas']}")
+        if data['nama'] == nama:
+            nama_sudah_ada = True
+            break
+
+    if nama_sudah_ada:
+        print("nama sudah ada")
+    else:
+        di_simpan = {"nama": nama, "mata kuliah": mata_kuliah, "kelas": kelas}
+        
+
+with open("data_mahasiswa.txt", "a") as file:
+    for data in data_mahasiswa:
+        file.write(f"Nama : {data['Nama']}, Mata Kuliah : {data['mata kuliah']}, Kelas : {data['Kelas']}")
 
 print("data berhasil di simpan")
