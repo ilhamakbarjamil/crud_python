@@ -19,10 +19,11 @@ while True:
         print("nama sudah ada")
     else:
         di_simpan = {"nama": nama, "mata kuliah": mata_kuliah, "kelas": kelas}
-        
+        data_mahasiswa.append(di_simpan)
+        print("data di tambahkan")
 
 with open("data_mahasiswa.txt", "a") as file:
     for data in data_mahasiswa:
-        file.write(f"Nama : {data['Nama']}, Mata Kuliah : {data['mata kuliah']}, Kelas : {data['Kelas']}")
+        file.write(f"Nama : {data['nama']}, Mata Kuliah : {data['mata kuliah']}, Kelas : {data['kelas']}\n")
 
 print("data berhasil di simpan")
