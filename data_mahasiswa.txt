@@ -1,2 +1,4 @@
 Nama : akbar, Mata Kuliah : pemrograman lanjut, Kelas : b
 Nama : farhan, Mata Kuliah : pemrograman lanjut, Kelas : b
+Nama : bagas, Mata Kuliah : pemrograman lanjut , Kelas : b
+Nama : zaki, Mata Kuliah : pemrograman lanjut, Kelas : b
